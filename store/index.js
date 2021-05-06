@@ -16,6 +16,8 @@ export const mutations = {
 
 export const actions = {
   async login({ commit }) {
+    commit("setUserUid", null);
+    commit("setUserName", null);
     console.log("login action");
     const provider = new firebase.auth.GoogleAuthProvider();
     //provider.setCustomParameters({
@@ -33,6 +35,7 @@ export const actions = {
         console.log(email);
         if (!/^.*@dream\-jack\.com$/.test(email)) {
           console.log("domain error");
+          alert("djじゃないからログイン許さん")
           throw new Exception("invalid domain");
         }
         console.log("success : " + user.uid + " : " + user.displayName);

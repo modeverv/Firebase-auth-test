@@ -9,6 +9,7 @@
     <ul>
       <li>ログアウトないですね</li>
       <li>[完了]DJのドメインのみ許可ないですね</li>
+      <li>ログイン結果をlocalstrageとかに保持すれば良いのでしょうか</li>
     </ul>
   </div>
 </template>

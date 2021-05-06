@@ -1,9 +1,8 @@
 <template>
   <div>
-    <h1>テストページで情報維持するか</h1>
     <p class="title is-1 is-spaced">user: {{ $store.getters.getUserName }}</p>
     <p>DJの機密情報ここ???</p>
-    <nuxt-link to="/">戻る。。。</nuxt-link>
+    <nuxt-link to="/">戻る</nuxt-link>
   </div>
 </template>
 
