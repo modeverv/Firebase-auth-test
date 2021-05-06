@@ -22,9 +22,9 @@
     <nuxt-link to="/test">ログインしてたら別ページが表示できる</nuxt-link>
     <h2>TODO</h2>
     <ul>
-      <li>ログアウトないですね</li>
+      <li>[完了]ログアウトないですね</li>
       <li>[完了]DJのドメインのみ許可ないですね</li>
-      <li>ログイン結果をlocalstrageとかに保持すれば良いのでしょうか</li>
+      <li>[完了]ログイン結果をlocalstrageとかに保持すれば良いのでしょうか</li>
     </ul>
   </div>
 </template>
@@ -44,11 +44,8 @@ export default {
   },
   created() {
     firebase.auth().onAuthStateChanged(user => {
-      //リロード後に実行したい処理
       console.log(user);
       if (!/^.*@dream\-jack\.com$/.test(user.email)) {
-        commit("setUserUid", null);
-        commit("setUserName", null);
         return;
       }
       if (user) {
